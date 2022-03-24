@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Hanoi {
-	public static void Hanoi(int num,String start,String mid,String end) {
+	public static void Hanoi(int num, String start,String mid,String end) {
 		if(num==1) {
 			System.out.println("원반 "+num+"이 "+start+"에서 "+end+"로 이동");
 			return ;

@@ -47,7 +47,7 @@ public class DList <E> {
 	public void print() {
 		if(size >0) {
 			for(DNode p = head.getNext(); p!=tail; p=p.getNext()) {
-				System.out.println(p.getItem()+"\t");
+				System.out.print(p.getItem()+"\t");
 			}
 		}
 		else {

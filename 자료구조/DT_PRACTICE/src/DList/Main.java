@@ -13,6 +13,7 @@ public class Main {
 		a.delete(a.tail.getPrevious());
 		a.print();
 		a.delete(a.head.getNext());
+		a.print();
 		a.delete(a.head.getNext());
 		a.delete(a.head.getNext());
 		a.print();

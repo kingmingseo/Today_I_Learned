@@ -1,4 +1,4 @@
-package SList;
+package SList_ASM;
 
 import java.util.NoSuchElementException;
 
@@ -89,5 +89,50 @@ public class SList<E extends Comparable<E>> {
 		}
 		System.out.println();
 	}
+	
+	public SNode mergeList(SNode l1, SNode l2) {
+	        if (l1 == null){
+	            return l2;
+	        }
+	        if(l2 == null){
+	            return l1;
+	        }
+	        
+	        SNode nextNode = l1;
+	        while(true){
+	            System.out.print(nextNode.getItem()+" ");
+	            if (nextNode.getNext() != null){
+	                nextNode = nextNode.getNext();
+	            }else{
+	                break;
+	            }
+	        }
+	        
+	        
+
+	        
+	        SNode nextNode2 = l2;
+	        while(true){
+	            System.out.print(nextNode2.getItem()+" ");
+	            if (nextNode2.getNext() != null){
+	                nextNode2 = nextNode2.getNext();
+	            }else{
+	                break;
+	            }
+	        }
+	        
+	        
+	        return null;
+	    }
+	
+		
+	
+		
+	
+	
+	public void splitList(SNode p1, SNode p2) {
+		
+	}
+
 
 }

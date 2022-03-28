@@ -15,5 +15,13 @@ public class SNode<E extends Comparable<E>> {
 	public SNode<E> getNext() {return next;}
 	public void setItem(E newItem) {item=newItem;}
 	public void setNext(SNode k) {next=k;}
+	public int compareTo(SNode head) {
+		return (int)this.item-(int)head.getItem();	
+		
+	}
+	public int compareTo(int k) {
+		return (int)this.item-(int)k;	
+		
+	}
 
 }

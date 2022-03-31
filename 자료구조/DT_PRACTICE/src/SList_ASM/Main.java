@@ -1,4 +1,7 @@
-	package SList_ASM;
+// 자료구조 과제#2 60191645 김민서
+
+
+package SList_ASM;
 
 public class Main {
 	public static void main(String[] args) {
@@ -33,6 +36,7 @@ public class Main {
 		Single_List.insertFront(15);
 		Single_List.insertFront(90);
 		Single_List.insertFront(10);
+		
 		merged_List.mergeList(List_1.head, List_2.head);
 		System.out.print("Merged_List 3:  ");
 		merged_List.print();
@@ -44,7 +48,7 @@ public class Main {
 		Single_List.splitList(Single_List.head, 20, List_3, List_4);
 		
 		List_3.print();
-		System.out.println(List_3.head.getNext().getItem());
+		List_4.print();
 	
 		
 		

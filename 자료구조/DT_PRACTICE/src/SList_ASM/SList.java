@@ -1,5 +1,9 @@
+// 자료구조 과제#2 60191645 김민서
+
+
 package SList_ASM;
 
+import java.util.ArrayList;
 import java.util.NoSuchElementException;
 
 
@@ -94,8 +98,8 @@ public class SList<E extends Comparable<E>> {
 		if(p1==null) {return p2;}
 		if(p2 == null) {return p1;}
 	
-		
 		SNode result;
+		
 			if((p1.getItem().compareTo(p2.getItem())<=0)){
 				if(head==null){size++;head=p1;}
 				
@@ -117,36 +121,58 @@ public class SList<E extends Comparable<E>> {
 			
 			
 	}
-	
 	public void splitList(SNode p, int k, SList L1, SList L2) {
-		SNode result_1;
-		SNode result_2;
-	
-			if(p==null) {break;}
-			
-			if((p.getItem().compareTo(k))<=0){
-				if(L1.head==null) {size++; L1.head=p;}
-				result_1=p;	
-				L1.insertFront(p);
-				size++;
-				
-				
-			}
-			else {
-				if(L2.head==null) {size++; L2.head=p;}
-				
-				
-				p=p.getNext();
-				size++;
-				
-			}
+		ArrayList temp_1 = new ArrayList();
+		ArrayList temp_2 = new ArrayList();
+		SNode t;
+		SNode q;
+		
+		int a=0;
+		int b=0;
+		
+		
+		while(true) {
+		  if(p==null) {break;}
+				if(p.getItem().compareTo(k)<=0) {
+					
+					temp_1.add(p);
+					p=p.getNext();
+					a++;
+					L1.size++;
+				}
+				else {
+					
+					temp_2.add(p);
+					
+					p=p.getNext();
+					b++;
+					L2.size++;
+				}
 		}
+		L1.head=(SNode) temp_1.get(0);
+		L2.head=(SNode) temp_2.get(0);
+		t=L1.head;
+		q=L2.head;
+		for(int i=1; i<temp_1.size(); i++) {
+			t.setNext((SNode)temp_1.get(i));
+			t=t.getNext();
 			
-			
-		
-		
-		
+			}
+		for(int i=1; i<temp_2.size(); i++) {
+			q.setNext((SNode)temp_2.get(i));
+			q=q.getNext();
+		}
+		t.setNext(null);
+		q.setNext(null);		
+	
 	}
+}
+			
+			
+		
+		
+		
+	
 	
 	     
 	
@@ -158,4 +184,4 @@ public class SList<E extends Comparable<E>> {
 	
 
 
-}
+

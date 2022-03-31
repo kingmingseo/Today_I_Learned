@@ -1,3 +1,7 @@
+// 자료구조 과제#2 60191645 김민서
+
+
+
 package SList_ASM;
 
 public class SNode<E extends Comparable<E>> {

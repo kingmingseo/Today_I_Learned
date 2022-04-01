@@ -25,8 +25,10 @@ new_data%>%select(Time,Division,Particulates)%>%arrange(desc(Particulates))%>%he
  
 #해석 : 결측치를 제거한 new_data에서 초미세먼지에 대한 정보를 제외하고 일시와 장소 미세먼지에대한 정보만 select후 미세먼지가 높은순으로 정렬 한뒤 첫번째 값만 출력했다.
 #정답 : 2021-05-08 1:00 중구
-options(max.print=99999999)
-new_data%>%select(Time,Division,Ultra_Particulates)%>%arrange(Ultra_Particulates)
+a=new_data%>%select(Time,Division,Ultra_Particulates)%>%arrange(Ultra_Particulates)
+View(a)
 #해석 : 결측치를 제거한 new_data에서 미세먼지에 대한 정보를 제외하고 일시와 장소 초미세먼지에 대한 정보만 select한 후 초미세먼지를 기준으로 오름차순 정렬을 했다. 
-#결과 : 초미세먼지 측정값의 최저치가 "1"인 일시와 지역이 너무 많다. 출력제한을 해제한뒤 출력한 결과 3333번의 일시가 최저치로 측정되었다.
+#결과 : 초미세먼지 측정값의 최저치가 "1"인 일시와 지역이 너무 많다. View를 활용해 데이터를 확인한 결과 5698번의 일시가 최저치로 측정되었다.
+
+
 

@@ -113,7 +113,7 @@ public class SList<E extends Comparable<E>> {
 				if(head==null){size++; head=p2;}
 				result=p2;
 				size++;
-				p2.setNext(mergeList(p1,p2.getNext()));
+	  			p2.setNext(mergeList(p1,p2.getNext()));
 				
 			}
 			

@@ -11,6 +11,7 @@ public class ArrayQueue<E> {
 	}
 	public int size() {return size;}
 	
+	
 	public boolean isEmpty() {return (size==0);}
 	
 	public void add(E newItem) {

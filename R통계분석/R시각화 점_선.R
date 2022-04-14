@@ -14,3 +14,6 @@ lines(x,z,col="blue")
 b=c(1,2,1,4,3,5,4,5,3,2,5,6,7,2,8,5,9,5,3,5)
 hist(b)
   
+
+qplot(data=iris,x=Sepal.Length,y=Petal.Length)
+ggplot(data=iris,aes(x=Sepal.Length,y=Petal.Length))+geom_point()

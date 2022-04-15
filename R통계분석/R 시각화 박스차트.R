@@ -7,3 +7,9 @@ boxplot(iris$Sepal.Length,horizontal = T,col="green1")
 hist(iris$Sepal.Length,xlim=c(4,8),col="pink",freq=F)
 lines(density(iris$Sepal.Length))
 dev.off()
+
+
+
+library(dplyr)
+a=boxplot(hwy~cyl,data=mpg,col=rainbow(3))
+a
